@@ -1,0 +1,7 @@
+ssh tony@stapp01
+
+sudo su -
+
+yum install zip -y
+
+do this for all the app servers
