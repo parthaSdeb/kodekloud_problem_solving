@@ -1,0 +1,30 @@
+ssh tony@stapp01
+Ir0nM@n
+
+ssh steve@stapp02
+Am3ric@
+
+ssh banner@stapp03
+BigGr33n
+
+
+grep -i Listen /etc/httpd/conf/ht* /etc/nginx/nginx.conf
+
+
+yum install firewalld -y
+
+systemctl start firewalld && systemctl enable firewalld && systemctl status firewalld
+
+firewall-cmd --zone=public --add-port=8097/tcp --permanent
+
+firewall-cmd --permanent --zone=public --add-service={http,https}
+
+firewall-cmd --permanent --add-rich-rule="rule family=ipv4 source address=172.16.238.14 port port=8086 protocol=tcp accept"
+
+systemctl start nginx && sudo systemctl enable nginx && sudo systemctl status nginx
+
+systemctl start httpd && sudo systemctl enable httpd && sudo systemctl status httpd
+
+firewall-cmd --reload && firewall-cmd --zone=public --list-all
+
+
