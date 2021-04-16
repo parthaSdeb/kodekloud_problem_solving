@@ -1,0 +1,16 @@
+ssh banner@stapp03
+sudo su -
+useradd -u 1968 -d /var/www/kirsty kirsty
+cat /etc/passwd | grep kirsty
+
+
+
+
+
+
+
+
+```[#] ssh banner@stapp03```<br />
+```[#] sudo su -```<br />
+```[#] useradd -u 1020 -d /var/www/ravi ravi```<br />
+```[#] cat /etc/passwd | grep ravi```<br />
