@@ -1,0 +1,17 @@
+ssh steve@stapp02
+
+sudo su -
+
+ll /beta
+
+find /var/www/html/beta -type f -name '*.php'
+
+find /var/www/html/beta -type f -name '*.php' | wc -l
+
+find /var/www/html/beta -type f -name '*.php' -exec cp --parents {} /beta \;
+
+ll /beta
+
+
+
+
