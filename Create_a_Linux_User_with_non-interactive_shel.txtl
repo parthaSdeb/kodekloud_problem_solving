@@ -1,0 +1,14 @@
+ssh tony@stappo1
+sudo su -
+useradd -s /sbin/nologin javed
+cat /etc/passwd |grep javed
+
+
+
+--------------------------------------------
+
+```[#] ssh tony@stappo```<br />
+```[#] sudo su -```<br />
+```[#] useradd -s /sbin/nologin javed```<br />
+```[#] cat /etc/passwd |grep javed```<br />
+
