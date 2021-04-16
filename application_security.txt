@@ -1,0 +1,11 @@
+ iptables -A INPUT -p tcp --dport 8098 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+    2  # sudo iptables -A INPUT -p tcp --dport 5004 -m conntrack --ctstate NEW -j REJECT
+    3  iptables -A INPUT -p tcp --dport 3002 -m conntrack --ctstate NEW -j REJECT
+    4  iptables-save > /etc/sysconfig/iptables
+    5  cat /etc/sysconfig/iptables
+    6  systemctl status iptable
+    7  iptables -L
+    8  systemctl status iptables
+    9  systemctl start iptables
+   10  systemctl enable iptables
+   11  systemctl status iptables
