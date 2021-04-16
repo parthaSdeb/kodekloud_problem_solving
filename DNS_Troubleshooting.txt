@@ -1,0 +1,11 @@
+ssh tony@stapp01
+sudo su -
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+ping google.com
+
+-----------------------------------------------
+
+```[#] ssh tony@stapp01```<br />
+```[#] sudo su -```<br />
+```[#] echo "nameserver 8.8.8.8" > /etc/resolv.conf```<br />
+```[#] ping google.com```<br />
