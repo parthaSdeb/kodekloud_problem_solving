@@ -1,0 +1,28 @@
+ssh steve@stapp02
+sudo su -
+
+systemctl start && systemctl status httpd
+
+cat /etc/httpd/conf/httpd.conf | grep -i token
+
+curl -I http://your respective app server IP:8080
+
+vim /etc/httpd/conf/httpd.conf
+
+     ServerTokens Prod
+
+     ServerSignature Off
+
+
+<Directory "/var/www/html/beta/">
+
+    AllowOverride   None
+    Require All granted
+
+
+Options FollowSymLinks
+
+</Directory>
+
+systemctl restart httpd 
+systemctl status httpd
