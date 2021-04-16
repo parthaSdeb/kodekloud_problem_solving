@@ -1,0 +1,30 @@
+ssh tony@stapp01
+sudo su -
+cat /etc/passwd | grep javed
+groupadd nautilius_admin_users
+useradd -G nautilius_admin_users javed
+cat /etc/passwd | grep javed
+tail -5 /etc/group
+
+
+------------------------------------------------------------------------------
+```[#] ssh tony@stapp01```<br />
+```[#] sudo su -```<br />
+```[#] cat /etc/passwd | grep javed```<br />
+```[#] groupadd nautilius_admin_users```<br />
+```[#] useradd -G nautilius_admin_users javed```<br />
+```[#] cat /etc/passwd | grep javed```<br />
+```[#] tail -5 /etc/group```<br />
+
+--------------------------------------------------------------------------------
+
+```[#] ssh tony@stapp01```<br />
+```[#] sudo su -```<br />
+```[#] cat /etc/passwd | grep mohammed```<br />
+```[#] groupadd nautilus_noc```<br />
+```[#] useradd -G nautilus_noc mohammed```<br />
+```[#] cat /etc/passwd | grep mohammed```<br />
+```[#] tail -5 /etc/group```<br />
+
+perform the same task for stapp01. stapp02 servers
+
