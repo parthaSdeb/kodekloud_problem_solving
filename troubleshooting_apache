@@ -1,0 +1,35 @@
+ssh tony@stapp01 , 
+sudo su - , 
+systemctl status httpd , 
+systemctl start httpd , 
+systemctl status httpd , 
+
+vi /etc/httpd/conf/httpd.conf , 
+check line no 42 and 119, and correct them as follows. 
+Listen 172.16.238.10:5004 , 
+DocumentRoot /var/www/html , 
+
+systemctl restart httpd , 
+systemctl status httpd , 
+
+Perform this steps for all the application servers.
+
+------------------------------------------------------------------
+
+```[#] ssh tony@stapp01```<br />
+```[#] sudo su -```<br />
+```[#] systemctl status httpd```<br />
+```[#] systemctl start httpd```<br />
+```[#] systemctl status httpd```<br />
+
+```[#] vi /etc/httpd/conf/httpd.conf```<br />
+check line no 42 and 119, and correct them as follows. 
+Listen 172.16.238.10:5004
+DocumentRoot /var/www/html
+
+```[#] systemctl restart httpd```<br />
+```[#] systemctl status httpd```<br />
+
+Perform this steps for all the application servers (stapp01,stapp02,stapp03).
+
+
