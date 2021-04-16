@@ -1,0 +1,43 @@
+[#] scp /home/thor/nautilus_banner tony@172.16.238.10:/home/tony
+
+[#] scp /home/thor/nautilus_banner steve@172.16.238.11:/home/steve
+
+[#] scp /home/thor/nautilus_banner banner@172.16.238.12:/home/banner
+
+[#] scp /home/thor/nautilus_banner peter@172.16.239.10:/home/peter
+
+[#] ssh tony@172.16.238.10
+[#] sudo su -
+[#] mv /home/thor/nautilus_banner /etc/motd
+[#] ssh steve@172.16.238.11
+[#] sudo su -
+[#] mv /home/steve/nautilus_banner /etc/motd
+[#] ssh banner@172.16.238.12
+[#] sudo su -
+[#] mv /home/banner/nautilus_banner /etc/motd
+[#] ssh peter@172.16.239.10
+[#] sudo su -
+[#] mv /home/thor/nautilus_banner /etc/motd
+
+------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+```[#] scp /home/thor/nautilus_banner tony@172.16.238.10:/home/tony```<br />
+```[#] scp /home/thor/nautilus_banner steve@172.16.238.11:/home/steve```<br />
+```[#] scp /home/thor/nautilus_banner banner@172.16.238.12:/home/banner```<br />
+```[#] scp /home/thor/nautilus_banner peter@172.16.239.10:/home/peter```<br />
+```[#] ssh tony@172.16.238.10```<br />
+```[#] sudo su -```<br />
+```[#] mv /home/thor/nautilus_banner /etc/motd```<br />
+```[#] ssh steve@172.16.238.11```<br />
+```[#] sudo su -```<br />
+```[#] mv /home/steve/nautilus_banner /etc/motd```<br />
+```[#] ssh banner@172.16.238.12```<br />
+```[#] sudo su -```<br />
+```[#] mv /home/banner/nautilus_banner /etc/motd```<br />
+```[#] ssh peter@172.16.239.10```<br />
+```[#] sudo su -```<br />
+```[#] mv /home/thor/nautilus_banner /etc/motd```<br />
+
+
+
