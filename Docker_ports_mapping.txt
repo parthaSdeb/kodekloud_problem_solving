@@ -1,0 +1,7 @@
+```[#] ssh steve@stapp02``<br />
+
+```[#] sudo su -```<br />
+
+```[#] docker image pull nginx:latest```<br />
+
+```[#] docker container run -p 8081:80 --name beta nginx:stable```<br />
