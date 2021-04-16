@@ -1,0 +1,17 @@
+ssh clint@stbkp01
+sudo su -
+cat /nautilus.xml | grep Sample
+cat /nautilus.xml | grep sample | wc -l
+sed -i 's/Sample/Architecturing/g' nautilius.xml
+cat /nautilus.xml | grep Sample
+cat /nautilus.xml | grep Architecturing
+
+-------------------------------------------
+
+```[#] ssh clint@stbkp01```<br />
+```[#] sudo su -```<br />
+```[#] cat /nautilus.xml | grep Sample```<br />
+```[#] cat /nautilus.xml | grep sample | wc -l```<br />
+```[#] sed -i 's/Sample/Architecturing/g' nautilius.xml```<br />
+```[#] cat /nautilus.xml | grep Sample```<br />
+```[#] cat /nautilus.xml | grep Architecturing```<br />
