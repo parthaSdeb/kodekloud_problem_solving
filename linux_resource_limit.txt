@@ -1,0 +1,22 @@
+ssh natasha@ststor01
+sudo su -
+vi /etc/security/limits.conf
+
+    Type i for insert mode in editor and add the following lines
+
+    nfsuser soft nproc 76
+    nfsuser hard nproc 100
+
+cat /etc/security/limits.conf | grep nproc | grep -v ^#
+
+
+-------------------------------------------------------------------------------
+
+```[#] ssh natasha@ststor01```<br />
+```[#] sudo su -```<br />
+```[#] vi /etc/security/limits.conf```<br />
+
+    nfsuser soft nproc 75
+    nfsuser hard nproc 94
+
+```[#] cat /etc/security/limits.conf | grep nproc | grep -v ^#```<br />
