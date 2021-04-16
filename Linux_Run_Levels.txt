@@ -1,0 +1,19 @@
+ssh tony@stapp01
+sudo su -
+systemctl get-default
+systemctl set-default graphical.target
+systemctl start graphical.target
+systemctl enable graphical.target
+systemctl status graphical.target
+systemctl getet-default
+
+-------------------------------------------------------------
+
+```[#] ssh tony@stapp01```<br />
+```[#] sudo su -```<br />
+```[#] systemctl get-default```<br />
+```[#] systemctl set-default graphical.target```<br />
+```[#] systemctl start graphical.target```<br />
+```[#] systemctl enable graphical.target```<br />
+```[#] systemctl status graphical.target```<br />
+```[#] systemctl getet-default```<br />
