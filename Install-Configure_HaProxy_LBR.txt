@@ -1,0 +1,33 @@
+log into stapp01, stapp02, stapp03 and find in which port are they listening
+
+ssh tony@172.16.238.10  	Ir0nM@n
+ssh steve@172.16.238.11		Am3ric@
+ssh banner@172.16.238.12	BigGr33n
+
+cat /etc/httpd/conf/httpd.conf| grep Listen
+
+systemctl enable httpd && systemctl start httpd && systemctl status httpd
+
+-----------------------------------------------------------------------------
+5003
+
+ssh loki@172.16.238.14
+Mischi3f
+
+yum install haproxy -y
+
+cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bkp
+
+cat /etc/haproxy/haproxy.cfg | grep haproxy/stat
+
+vi /etc/haproxy/haproxy.cfg
+
+
+haproxy -f /etc/haproxy/haproxy.cfg
+
+systemctl enable haproxy && systemctl start haproxy && systemctl status haproxy 
+
+
+curl 172.16.238.14:80
+
+
