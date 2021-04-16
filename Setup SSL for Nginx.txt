@@ -1,0 +1,50 @@
+ssh steve@stapp02
+
+sudo su -
+
+yum install epel-release -y
+
+yum install nginx -y
+
+ll /tmp
+
+
+vi /etc/nginx/nginx.conf
+
+search for the server line  /server
+
+sever{
+    server_name 172.16.238.11;
+}
+
+# setting for tls enabled server
+
+server{
+
+server_name  my machines ip
+
+than uncomment all the ssl_certificate related lines
+
+uncomment load config related files
+
+
+ssl_certificate "/etc/pki/CA/certs/nautilus.crt";
+ssl_certificate_key "/etc/pki/CA/private/nautilus.key";
+
+
+}
+
+
+cp /tmp/nautilus.cert /etc/pki/CA/certs
+cp /tmp/nautilus.key /etc/pki/CA/private
+
+rm /usr/share/nginx/html/index.html
+
+vim /usr/share/nginx/html/index.html
+	welcome!
+
+systemctl restart nginx
+systemctl status nginx
+
+curl -Ik https://172.16.238.12
+
