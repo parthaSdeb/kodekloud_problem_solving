@@ -1,0 +1,37 @@
+ssh clint@stbkp01
+sudo su -
+ls -l /packages/downloaded_rpms/
+cd /etc/yum.repos.d/
+vi yum_local.repo
+    add this lines, as follows.
+    [yum_local]
+    name=yum_local
+    baseurl=file:///packages/downloaded_rpms/
+    enabled=1
+    gpgcheck=0
+
+yum clean all
+yum repolist
+yum install wget -y
+
+
+--------------------------------------------------------
+
+
+```[#] ssh clint@stbkp01```<br />
+```[#] sudo su -```<br />
+```[#] ls -l /packages/downloaded_rpms/```<br />
+```[#] cd /etc/yum.repos.d/```<br />
+
+```[#] vi yum_local.repo```<br />
+add this lines, as follows.
+    [yum_local]
+    name=yum_local
+    baseurl=file:///packages/downloaded_rpms/
+    enabled=1
+    gpgcheck=0
+
+```[#] yum clean all```<br />
+```[#] yum repolist```<br />
+```[#] yum install wget -y```<br />
+
