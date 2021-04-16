@@ -1,0 +1,43 @@
+
+from jumphost to web server , copy the index.html file
+
+ll /tmp/index.html
+scp /tmp/index.html banner@stapp03:/tmp
+
+
+
+ssh banner@stapp03
+
+sudo su -
+
+ll /tmp/index.html
+
+systemctl start httpd && systemctl status httpd
+
+mkdir /var/www/html/finance
+
+htpasswd -c /etc/httpd/.htpasswd siva
+
+sudo systemctl restart httpd
+
+vi /etc/httpd/conf/httpd.conf 
+
+Scroll down to the <Directory> section for "/var/www/html" and change  
+
+AllowOverride to All
+
+
+vi /var/www/html/finance/.htaccess
+
+AuthType Basic
+AuthName "Password Required"
+Require valid-user
+AuthUserFile /etc/httpd/.htpasswd
+
+
+systemctl restart httpd 
+
+curl -u siva http://stapp03:8080/finance
+curl -u siva http://stapp03:8080/finance/index.html
+
+LQfKeWWxWD
