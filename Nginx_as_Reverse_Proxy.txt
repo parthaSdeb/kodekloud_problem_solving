@@ -1,0 +1,41 @@
+H@wk3y3
+
+scp /home/index.html  clint@172.16.238.16:/tmp	
+
+ssh clint@172.16.238.16	
+
+yum install httpd -y
+
+systemctl enable httpd 
+
+vim /etc/httpd/conf/httpd.conf
+        Listen 3002 
+        
+mv /tmp/index.html /var/www/html
+
+systemctl restart httpd
+systemctl status httpd
+------------------------
+
+yum install epel-release
+
+yum install nginx -y
+
+systemctl enable nginx
+
+vi /etc/nginx/nginx.conf 
+Change in 2 place
+        listen 8093
+        servername 172.16.238.16
+
+        in between location block:
+        proxy_pass http://172.16.238.16:3002;
+        
+nginx -t
+
+systemctl restart nginx
+systemctl status nginx
+
+curl http://172.16.238.16:8095
+
+
