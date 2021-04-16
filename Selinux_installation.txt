@@ -1,0 +1,19 @@
+ssh steve@stapp02
+sudo su -
+yum install selinux* -y
+getenforce
+
+vi /etc/selinux/config 
+    set SELINUX=disabled
+ 
+cat /etc/selinux/config | grep SELINUX
+
+-----------------------------------------------------------------
+```[#] ssh steve@stapp02```<br />
+```[#] sudo su -```<br />
+```[#] yum install selinux* -y```<br />
+```[#] getenforce```<br />
+```[#] vi /etc/selinux/config ```<br />
+    set SELINUX=disabled
+```[#] cat /etc/selinux/config | grep SELINUX```<br />
+
