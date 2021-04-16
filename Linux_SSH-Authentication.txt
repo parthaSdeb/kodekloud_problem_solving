@@ -1,0 +1,18 @@
+whoami
+ssh-keygen -t -rsa
+cat /tmp/p
+
+ssh-copy-id tony@stapp01
+provide stapp01's password: Ir0nM@n
+ssh tony@stapp01
+
+
+ssh-copy-id steve@stapp02
+provide stapp02's password: Am3ric@
+ssh steve@stapp02
+
+
+ssh-copy-id banner@stapp03
+provide stapp03's password: BigGr33n
+ssh banner@stapp03
+
