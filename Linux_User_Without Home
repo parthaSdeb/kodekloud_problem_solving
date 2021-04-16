@@ -1,0 +1,4 @@
+ssh tony@stapp01
+sudo su -
+useradd -M javed
+cat /etc/passwd | grep javed
