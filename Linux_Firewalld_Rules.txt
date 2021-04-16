@@ -1,0 +1,16 @@
+ 1  firewall-cmd --list-all
+    2  firewall-cmd --permanent --add-port=8084/tcp --zone=public
+    3  firewall-cmd --reload
+    4  firewall-cmd --list-all
+    5  history
+
+------------------------------------
+
+```[#] ssh clint@stbkp01```<br />
+```[#] sudo su -```<br />
+```[#] firewall-cmd --list-all```<br />
+```[#] firewall-cmd --permanent --zone=public --add-port=6200/tcp```<br />
+```[#] firewall-cmd --reload```<br />
+```[#] firewall-cmd --list-all```<br />
+
+
