@@ -1,0 +1,26 @@
+________
+from jump host |
+_______________
+cd /tmp && ll
+
+scp ROOT.war banner@stapp03:/tmp
+
+
+ssh banner@172.16.238.12
+BigGr33n
+sudo su -
+
+yum install tomcat -y
+
+vi /etc/tomcat/server.xml
+
+	<connector port="8082" protocol="HTTP/1.1"
+save and exit
+
+cp /tmp/ROOT.war /var/lib/tomcat/webapps/
+
+systemctl restart tomcat && systemctl status tomcat
+
+
+
+
