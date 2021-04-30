@@ -1,0 +1,66 @@
+ssh natasha@172.16.238.15
+
+Bl@kW
+
+sudo su -
+
+yum install nfs-utils nfs-utils-lib -y
+
+ll /appdata
+
+vi /etc/exports
+	/code	172.16.238.10(rw,sync,no_root_squash)
+	/code	172.16.238.11(rw,sync,no_root_squash)
+	/code	172.16.238.12(rw,sync,no_root_squash)
+
+sysytemctl enable nfs-server && systemctl start nfs-server && systemctl status nfs-server
+
+exportfs -av
+
+showmount -e ststor01
+
+yum install openssh-clients openssh -y
+
+-----------------------------------------------------------------------------------------------------------
+open another terminal which will be jump host and copy the index.html file from jump host to storage host -
+
+sudo scp /tmp/index.html natasha@172.16.238.15:/tmp							
+
+thors pass: mjolnir123
+natasha pass: Bl@kW
+-----------------------------------------------------------------------------------------------------------
+
+mv /tmp/index.html /appdata
+
+
+--------------------------enter into web hosts --------------------------------------------
+ssh tony@172.16.238.10
+Ir0nM@n
+
+ssh steve@172.16.238.11
+Am3ric@
+
+ssh banner@172.16.238.12
+BigGr33n
+
+sudo su -
+
+yum install nfs-utils nfs-utils-lib -y
+
+mkdir -p /var/www/code
+
+sysytemctl enable nfs-server && systemctl start nfs-server && systemctl status nfs-server
+
+vi /etc/fstab
+echo 172.16.238.15:/appdata /var/www/code nfs defaults 0 0 > /etc/fstab
+
+
+
+
+
+
+
+	
+
+
+
