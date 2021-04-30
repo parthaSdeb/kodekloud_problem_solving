@@ -1,0 +1,29 @@
+ssh tony@172.16.238.10 
+Ir0nM@n
+
+ssh steve@172.16.238.11
+Am3ric@
+
+ssh banner@172.16.238.12
+BigGr33n
+
+sudo su -
+
+systemctl status httpd & systemctl start httpd
+
+cat /etc/httpd/conf/httpd.conf | grep Listen
+cat /etc/httpd/conf/httpd.conf | grep 3001
+
+yum install net-tools -y
+
+netstat -tulpn
+
+ps -ef | grep 334
+
+kill -9 334
+
+netstat -tulpn
+
+systemctl start htttpd && systemctl status httpd
+
+httpd -t 
