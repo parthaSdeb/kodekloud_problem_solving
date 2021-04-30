@@ -1,0 +1,46 @@
+ssh peter@stdb01
+Sp!dy
+
+sudo su -
+
+yum install postgresql-server postgresql-contrib
+
+postgresql-setup initdb
+
+systemctl enable postgresql && sudo systemctl start postgresql
+
+systemctl status postgresql
+
+sudo -u postgres psql postgres
+__________________________________________________________________________________-
+CREATE USER kodekloud_roy WITH PASSWORD 'BruCStnMT5';
+
+CREATE DATABASE kodekloud_db3;
+
+GRANT ALL PRIVILEGES ON DATABASE "kodekloud_db3" to kodekloud_roy;
+
+__________________________________________________________________________________
+
+vi /var/lib/pgsql/data/pg_hba.conf
+	comment out akk the kined in bottom. Go to bottom of the config and edit
+
+	local all all md5
+	host all all 127.0.0.1/32 md5
+
+
+vi /var/lib/pgsql/data/postgresql.conf
+	Uncomment listen_address=localhost
+
+cat /var/lib/pgsql/data/postgresql.conf | grep listen
+
+ 
+	
+
+systemctl restart postgresql
+systemctl status postgresql.service
+
+Finally Check
+
+psql -U username -d dbname -h 127.0.0.1 -W
+
+psql -U username -d dbname -h localhost -W
